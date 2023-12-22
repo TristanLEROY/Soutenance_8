@@ -23,7 +23,7 @@ const CollapseArrays = [
 ]
 
 function About() {
-  const collapseInner = CollapseArrays.map((CollapseArray) => (
+  const accordeon = CollapseArrays.map((CollapseArray) => (
     <Collapse
       title={CollapseArray.title}
       p={CollapseArray.p}
@@ -34,7 +34,7 @@ function About() {
   return (
     <div>
       <Banner img={BannerAboutBackground} />
-      <div className='container-collapse'>{collapseInner}</div>
+      <div className='container-collapse'>{accordeon}</div>
     </div>
   )
 }
