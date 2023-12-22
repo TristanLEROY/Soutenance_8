@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 45px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+
+  &_logo {
+    height: 68px;
+  }
+
+  &_link {
+    display: flex;
+    align-items: center;
+    gap: 30%;
+    width: 250px;
+    & > a {
+      color: #ff6060;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+      text-decoration: none;
+
+      &_active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

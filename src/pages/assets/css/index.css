@@ -1,0 +1,15 @@
+.container-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 100px;
+  margin-right: 100px;
+  gap: 60px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}/*# sourceMappingURL=index.css.map */

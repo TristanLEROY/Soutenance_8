@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  position: relative;
+  margin: 0;
+
+  &_img {
+    height: 270px;
+    object-fit: cover;
+    border-radius: 25px;
+    opacity: 0.8;
+  }
+
+  &_title {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    text-shadow: 2px 2px 2px #000000;
+  }
+}

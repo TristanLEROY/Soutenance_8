@@ -1,0 +1,29 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 50px;
+
+  &_title {
+    position: absolute;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+  }
+
+  &_img {
+    object-fit: cover;
+    height: 225px;
+    width: 100%;
+    border-radius: 25px;
+  }
+}
