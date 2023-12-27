@@ -1,3 +1,131 @@
-.collapse_bar--img {
-  background-color: black;
+.container-collapse {
+  margin: 20px 8% 70px 8%;
+  gap: 30px;
+}
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &_bar {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    height: 50px;
+    list-style: none;
+    background-color: #ff6060;
+    padding: 0 20px 0 20px;
+    border-radius: 5px;
+    z-index: 2;
+
+    &--title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ff6060;
+      height: 50px;
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+      margin: 0;
+    }
+
+    &--img-close {
+      animation: rotateclose 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    &--img-open {
+      animation: rotateopen 0.5s ease-in-out;
+      transform: rotate(180deg);
+      cursor: pointer;
+    }
+  }
+
+  &_p {
+    margin: 0;
+    background: var(--Gray, #f6f6f6);
+    color: #ff6060;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+    transform-origin: all 0.7s ease-in-out;
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 1;
+
+    &--close:active {
+      animation: progress-p-close 0.5s ease-in-out;
+    }
+
+    &--open {
+      animation: progress-p-open 0.5s ease-in-out;
+    }
+  }
+}
+
+@keyframes rotateopen {
+  0% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, 300deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 250deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 200deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+}
+
+@keyframes rotateclose {
+  0% {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  25% {
+    transform: rotate3d(0, 0, 1, 200deg);
+  }
+  50% {
+    transform: rotate3d(0, 0, 1, 250deg);
+  }
+  75% {
+    transform: rotate3d(0, 0, 1, 300deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+
+@keyframes progress-p-open {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes progress-p-close {
+  from {
+    height: 100%;
+    opacity: 0;
+  }
+  to {
+    height: 0;
+    transform: translateY(-30px);
+  }
 }
