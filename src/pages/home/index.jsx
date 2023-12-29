@@ -3,25 +3,18 @@ import Banner from '../../components/banner'
 import Card from '../../components/card'
 import BannerHomeBackground from '../../assets/banner-home.jpg'
 import './index.scss'
-import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import propTypes from 'prop-types'
 
-function NavigateDetail(data) {
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    navigate(`/detail/:${data}`)
-  })
+Home.propTypes = {
+  data: propTypes.array.isRequired
+}
+Home.defaultProps = {
+  data: []
 }
 
 function Home({ data }) {
   const cardList = data.map((Location) => (
-    <Card
-      onClick={NavigateDetail(Location.id)}
-      title={Location.title}
-      pictures={Location.pictures[0]}
-      key={Location.id}
-    />
+    <Card Location={Location} key={Location.id} />
   ))
 
   const Bannerconst = (
@@ -32,7 +25,7 @@ function Home({ data }) {
   )
 
   return (
-    <div>
+    <div className='home_container'>
       {Bannerconst}
       <div className='container-card'>{cardList}</div>
     </div>

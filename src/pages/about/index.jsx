@@ -26,13 +26,12 @@ function About() {
   const accordeon = CollapseArrays.map((CollapseArray) => (
     <Collapse
       title={CollapseArray.title}
-      p={CollapseArray.p}
+      content={CollapseArray.p}
       key={CollapseArray.title}
     />
   ))
-
   return (
-    <div>
+    <div className='container'>
       <Banner img={BannerAboutBackground} />
       <div className='container-collapse'>{accordeon}</div>
     </div>

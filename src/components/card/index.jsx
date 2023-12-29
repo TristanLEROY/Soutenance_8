@@ -1,22 +1,24 @@
 import propTypes from 'prop-types'
 import './index.scss'
+import { Link } from 'react-router-dom'
 
 Card.propTypes = {
-  title: propTypes.string.isRequired,
-  pictures: propTypes.string.isRequired,
-  id: propTypes.string.isRequired
+  Location: propTypes.object.isRequired
 }
 Card.defaultProps = {
-  title: '',
-  pictures: '',
-  id: ''
+  Location: {}
 }
 
 function Card(props) {
   return (
-    <figure className='card' key={props.id}>
-      <img className='card_img' src={props.pictures} alt={props.title} />
-      <h2 className='card_title'>{props.title}</h2>
+    <figure key={props.Location.id} className='card'>
+      <Link to={`detail/${props.Location.id}`} className='card_link' />
+      <img
+        className='card_img'
+        src={props.Location.pictures[0]}
+        alt={props.Location.title}
+      />
+      <h2 className='card_title'>{props.Location.title}</h2>
     </figure>
   )
 }

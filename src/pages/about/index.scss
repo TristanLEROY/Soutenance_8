@@ -5,8 +5,20 @@ body {
   flex-direction: column;
 }
 
-.container-collapse {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.container {
+  margin-bottom: 250px;
+
+  &-collapse {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 8% 70px 8%;
+    gap: 30px;
+
+    @media (max-width: 767px) {
+      padding: 0;
+      margin: 19px 5% 19px 5%;
+      gap: 20px;
+    }
+  }
 }

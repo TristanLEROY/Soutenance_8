@@ -1,15 +1,23 @@
 .container-card {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  // justify-content: center;
   background-color: #f6f6f6;
   border-radius: 25px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-left: 8%;
-  margin-right: 8%;
-  gap: 70px;
+  margin: 25px 8% 25px 8%;
+  gap: 35px;
+  padding: 50px 25px 50px 25px;
   padding-bottom: 50px;
   padding-top: 50px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: auto auto;
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: auto;
+    background-color: unset;
+    margin: 20px 5% 20px 5%;
+    gap: 40px;
+    padding: unset;
+  }
 }

@@ -1,0 +1,14 @@
+.tags{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 10px;
+
+    &_span{
+        background-color: #FF6060;
+        color: white;
+        border-radius: 25px;
+        padding: 2px 15px 2px 15px;
+        min-width: 115px;
+    }
+}

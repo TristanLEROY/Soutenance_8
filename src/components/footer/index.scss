@@ -4,13 +4,32 @@
   align-items: center;
   justify-content: center;
   background-color: black;
-  color: white;
   gap: 28px;
   height: 209px;
   width: 100%;
-  position: absolute;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+  }
 
   &_logo {
     fill: rgb(69, 52, 52);
+
+    @media (max-width: 767px) {
+      width: 25%;
+    }
+  }
+
+  &_span {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+    @media (max-width: 767px) {
+      width: 25%;
+    }
   }
 }

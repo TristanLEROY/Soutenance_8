@@ -1,0 +1,45 @@
+.carousel {
+  position: relative;
+
+  &_div--span {
+    display: flex;
+    width: 90vw;
+  }
+
+  &_span {
+    position: relative;
+    height: 415px;
+
+    &--img {
+      // position: absolute;
+      height: 415px;
+      width: 100%;
+      border-radius: 25px;
+    }
+  }
+
+  &_count {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    z-index: 1;
+    color: white;
+  }
+  &_arrow--right {
+    position: absolute;
+    bottom: 50%;
+    right: 25px;
+    z-index: 1;
+  }
+
+  &_arrow--left {
+    position: absolute;
+    bottom: 50%;
+    left: 25px;
+    z-index: 1;
+  }
+}
+
+.no-picture {
+  display: none;
+}
