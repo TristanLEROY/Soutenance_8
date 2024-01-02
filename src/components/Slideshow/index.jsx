@@ -25,7 +25,7 @@ function Carousel({ pictureArray }) {
   const carouselImg = pictureArray.map((slide, index) => {
     return (
       <span key={index} className='carousel_div--span'>
-        {idx === index && <img className='carousel_span--img' src={slide} />}
+        {idx === index && <img className='carousel_div--img' src={slide} />}
       </span>
     )
   })

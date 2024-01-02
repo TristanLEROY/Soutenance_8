@@ -22,7 +22,7 @@ ContentLi.defaultProps = {
 }
 
 function ContentLi({ content }) {
-  return <li>{content}</li>
+  return <li className='collapse_p--li'>{content}</li>
 }
 
 function Collapse({ content, title }) {

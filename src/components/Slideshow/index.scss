@@ -1,23 +1,28 @@
 .carousel {
   position: relative;
 
-  &_div--span {
+ &_div{
+@media (max-width: 767px){
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+  &--span {
     display: flex;
     width: 90vw;
+    @media (max-width: 767px){
+      width: 95vw;
+    }
   }
-
-  &_span {
-    position: relative;
-    height: 415px;
 
     &--img {
       // position: absolute;
       height: 415px;
       width: 100%;
-      border-radius: 25px;
+      border-radius: 25px;      
     }
-  }
-
+  
+}
   &_count {
     position: absolute;
     bottom: 25px;
@@ -27,16 +32,25 @@
   }
   &_arrow--right {
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     right: 25px;
     z-index: 1;
+
+    @media (max-width: 767px){
+      height: 25px;
+      bottom: 50%;
+    }
   }
 
   &_arrow--left {
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     left: 25px;
     z-index: 1;
+    @media (max-width: 767px){
+      height: 25px;
+      bottom: 50%;
+    }
   }
 }
 
