@@ -20,7 +20,7 @@
   &_link {
     display: flex;
     align-items: center;
-    width: 17%;
+    width: 23%;
     gap: 4%;
 
     @media (max-width: 1024px) {
@@ -28,7 +28,7 @@
     }
     @media (max-width: 767px) {
       gap: 10%;
-      width: 26%;
+      width: 35%;
     }
     & > a {
       color: #ff6060;

@@ -9,7 +9,6 @@ import About from './pages/about'
 import './main.scss'
 import data from './data/data.json'
 import Detail from './pages/detail'
-import { Navigate } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -19,8 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/' element={<Home data={data} />} />
         <Route path='/about' element={<About />} />
         <Route exact path='/detail/:id' element={<Detail data={data} />} />
-        <Route path='/404' element={<Error />} />
-        <Route path="*" element={<Navigate replace to="/404" />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </Router>

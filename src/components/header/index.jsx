@@ -5,7 +5,9 @@ import './index.scss'
 function Header() {
   return (
     <header className='header'>
+      <Link to='/'>
       <img className='header_logo' src={Logo} alt='Logo du site' />
+      </Link>
       <div className='header_link'>
         <Link className='header_link--home' to='/'>
           Accueil

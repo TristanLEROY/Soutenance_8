@@ -3,6 +3,7 @@
     flex-direction: row;
     text-align: center;
     gap: 10px;
+    max-width: 95vw;
 
     &_span{
         background-color: #FF6060;
@@ -10,5 +11,13 @@
         border-radius: 25px;
         padding: 2px 15px 2px 15px;
         min-width: 115px;
+        @media (max-width: 767px){
+            display: flex;
+            border-radius: 10px;
+            place-items: center;
+            justify-content: center;
+            min-width: auto;
+            margin-right: 15px;
+        }
     }
 }

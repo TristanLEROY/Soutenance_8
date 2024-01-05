@@ -19,6 +19,9 @@
     @media (max-width: 767px) {
       height: 30px;
     }
+    &--img{
+      cursor: pointer;
+    }
 
     &--title {
       display: flex;
@@ -60,7 +63,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 142.6%;
-    transform-origin: all 0.7s ease-in-out;
     padding: 1rem;
     border-radius: 5px;
     z-index: 1;
@@ -68,15 +70,23 @@
     &--li{
       list-style-type:none;
     }
-    &--close:active {
-      animation: progress-p-close 0.5s ease-in-out;
-    }
+    
 
     &--open {
       animation: progress-p-open 0.5s ease-in-out;
     }
+    &--close {
+      animation: progress-p-close 0.5s ease-in-out forwards;
+      &-noanimation{
+        opacity: 0;
+        height: 0;
+        transform: translateY(-30px);
+      }
+    }
   }
 }
+
+
 
 @keyframes rotateopen {
   0% {
@@ -120,18 +130,22 @@
     opacity: 0;
   }
   to {
-    opacity: 100%;
+    opacity: 1;
     transform: translateY(0px);
   }
 }
 
 @keyframes progress-p-close {
   from {
-    height: 100%;
-    opacity: 0;
+    opacity: 1;
+    transform: translateY(0px);
   }
   to {
+    opacity: 0;
     height: 0;
     transform: translateY(-30px);
   }
 }
+
+
+

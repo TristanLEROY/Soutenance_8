@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import Collapse from '../../components/collapse'
 import Tags from '../../components/Tags'
 import Rating from '../../components/Rating'
-import { Navigate } from "react-router-dom";
+import Error from '../../components/error' 
 
 
 Detail.propTypes = {
@@ -47,7 +47,7 @@ function Detail({ data }) {
 } else {
   
   return(
-    <Navigate to="*" replace={true} />)
+    <Error />)
 }
 }
 

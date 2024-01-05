@@ -6,8 +6,11 @@ body {
 }
 
 .container {
-  margin-bottom: 250px;
+  margin-bottom: 50px;
 
+  @media (max-width: 767px){
+    margin-bottom: 260px;
+  }
   &-collapse {
     display: flex;
     flex-direction: column;
