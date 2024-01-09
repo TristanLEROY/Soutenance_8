@@ -4,6 +4,7 @@
   grid-template-columns: 1fr 1fr;
   margin: 50px 80px 50px 80px;
 
+  
   @media (max-width: 767px){
     margin: 0;
       grid-template-columns: 1fr 0;
@@ -68,7 +69,6 @@
 
   &--img{
     border-radius: 50%;
-    width: 50%;
     height: 50%;
   }
 

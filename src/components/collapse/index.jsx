@@ -27,15 +27,14 @@ function ContentLi({content}) {
 
 function Collapse({content, title}) {
     const [isOpen, setIsOpen] = useState(false);
-    const [isFirstLoad, setIsFirstLoad] = useState(true); // Nouvel état pour suivre le premier chargement
+    const [isFirstLoad, setIsFirstLoad] = useState(true)
 
     const handleOpen = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(!isOpen)
         if (isFirstLoad) {
-            setIsFirstLoad(false); // Mettre à jour l'état lors du premier clic
+            setIsFirstLoad(false)
         }
     };
-
 
     let list
     if (Array.isArray(content)) {
@@ -57,7 +56,7 @@ function Collapse({content, title}) {
             </div>
             <ul className={
                 isFirstLoad
-                    ? 'collapse_p collapse_p--close-noanimation' // Appliquer le style final sans animation
+                    ? 'collapse_p collapse_p--close-noanimation' 
                     : isOpen
                         ? 'collapse_p collapse_p--open'
                         : 'collapse_p collapse_p--close'

@@ -38,15 +38,28 @@
       font-style: normal;
       font-weight: 500;
       line-height: 142.6%;
-      text-decoration: none;
+      
 
       @media (max-width: 767px) {
         font-size: 17px;
       }
 
-      &_active {
-        text-decoration: underline;
-      }
+      
     }
   }
+}
+
+.header_link{
+
+  &--active {
+        text-decoration: underline;
+      }
+
+      &--about{
+        text-decoration: none;
+      }
+
+      &--home{
+        text-decoration: none;
+      }
 }
